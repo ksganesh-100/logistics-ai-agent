@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logistics Call-Off Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .agent-card {
+      @apply bg-white p-4 rounded-2xl shadow-md transition-all duration-300 ease-in-out;
+    }
+    .agent-card:hover {
+      @apply shadow-lg scale-102;
+    }
+    .agent-button {
+      @apply px-6 py-2 text-white bg-teal-600 font-semibold rounded-full shadow-md transition-transform transform hover:scale-105 hover:shadow-lg;
+    }
+    .agent-progress-bar.expired {
+      background-color: #e11d48;
+    }
+  </style>
+</head>
+<body class="p-4">
+  <h1 class="text-2xl font-bold text-gray-800 mb-6">Call-Off Process Flow</h1>
+  <div class="agent-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="agent-card"><h2 class="font-semibold text-lg text-gray-800 mb-2">1. Request Call Off</h2><p class="text-gray-600">Customer initiates the call-off request via email or portal input.</p></div>
+    <div class="agent-card"><h2 class="font-semibold text-lg text-gray-800 mb-2">2. AI Agent Parses Email</h2><p class="text-gray-600">Email Intake Agent extracts data, creates call-off draft in Logistics App.</p></div>
+    <div class="agent-card"><h2 class="font-semibold text-lg text-gray-800 mb-2">3. Contract Validation</h2><p class="text-gray-600">Validator Agent checks contract validity and quota availability.</p></div>
+    <div class="agent-card"><h2 class="font-semibold text-lg text-gray-800 mb-2">4. Inventory Assignment</h2><p class="text-gray-600">Assignment Agent identifies suitable batch to fulfill call off.</p></div>
+    <div class="agent-card"><h2 class="font-semibold text-lg text-gray-800 mb-2">5. Ops Approval</h2><p class="text-gray-600">Ops Routing Agent sends fulfillment plan to operations team for confirmation.</p></div>
+    <div class="agent-card"><h2 class="font-semibold text-lg text-gray-800 mb-2">6. Warehouse & Carrier Prep</h2><p class="text-gray-600">Warehouse prepares goods, carrier confirms pickup and loads cargo.</p></div>
+    <div class="agent-card"><h2 class="font-semibold text-lg text-gray-800 mb-2">7. Document Upload</h2><p class="text-gray-600">Packing List, CMR, and POD are uploaded and validated in the system.</p></div>
+    <div class="agent-card"><h2 class="font-semibold text-lg text-gray-800 mb-2">8. AI Tracker & Exception Handler</h2><p class="text-gray-600">Agents monitor call-off status, flag delays, and raise alerts if necessary.</p></div>
+    <div class="agent-card"><h2 class="font-semibold text-lg text-gray-800 mb-2">9. Movement Completion</h2><p class="text-gray-600">Delivery completed. Call-off marked as closed, documents archived.</p></div>
+  </div>
+</body>
+</html>
